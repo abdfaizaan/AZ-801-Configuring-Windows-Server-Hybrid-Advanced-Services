@@ -129,9 +129,9 @@ After completing this lab, you will be able to:
 
 1. Within the Remote Desktop session to **az801l07a-hv-vm**, start Microsoft Edge, and On the Welcome to Microsoft Edge page, select **Start without your data** and on the help for importing Google browsing data page, select the **Continue without this data** button. Then, proceed to select **Confirm and start browsing** on the next page, go to [Windows Server Evaluations](https://www.microsoft.com/en-in/EvalCenter).
 
-1. On start your evaluation today page, select Windows Server 2022's **Evaluate now** button.
+1. In the **Microsoft Eavluation Center** page, from the top menu click on **Windows Server (1)**. In the drop down menu that appers, click on **Windows Server (2)** and then select **Windows Server 2022 (3)**.
 
-   ![](../media/az801lab7img13.png)
+   ![](../media/select-win-server-2022.png)
 
 1. On the Windows Server 2022 page, under **Get started for free** select **Download the VHD** and on **Evaluate Windows Server 2022** page provide the requested information for 
    registration and click on **Download now (9)**.
