@@ -205,7 +205,7 @@ In this task, you will deploy an Azure virtual machine using an ARM template, sp
    |Setting|Value|
    |---|---|
    |Subscription|Leave the default value|
-   |Resource group| Select **AZ801-L0202-RG (1)** from the dropdown list |
+   |Resource group| Select **AZ801-L0201-RG (1)** from the dropdown list |
    |Region|Leave the default region **(2)**|
    |Admin Username| Enter **Student (3)** |
    |Admin Password|Enter **Pa55w.rd1234 (4)** |
