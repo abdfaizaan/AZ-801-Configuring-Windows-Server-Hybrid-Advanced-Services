@@ -126,7 +126,11 @@ In this task, you will be connecting to the iSCSI target hosted on SEA-DC1 from 
 
    ```powershell
    Add-IscsiVirtualDiskTargetMapping -TargetName “iSCSI-L03” -DevicePath “C:\Storage\Disk1.VHDX”
+   ```
+   ```powershell
    Add-IscsiVirtualDiskTargetMapping -TargetName “iSCSI-L03” -DevicePath “C:\Storage\Disk2.VHDX”
+   ```
+   ```powershell
    Add-IscsiVirtualDiskTargetMapping -TargetName “iSCSI-L03” -DevicePath “C:\Storage\Disk3.VHDX”
    ```
 

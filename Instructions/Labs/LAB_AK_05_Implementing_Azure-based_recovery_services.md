@@ -238,7 +238,7 @@ In this task, you will be setting up a recovery site by creating a virtual netwo
    |Region|**<inject key="Resource group Region"></inject> (4)** |
    |Primary Serice|**Azure Blob Storage or Azure Data Lake Storage Gen 2 (5)**|   
    |Performance|**Standard (6)**|
-   |Redundancy|**Locally redundant storage (LRS)(7)**|
+   |Redundancy|**Locally redundant storage (LRS) (7)**|
 
     ![](../media/azm5-18.png)
 
@@ -274,11 +274,11 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. On the **az801l05a-rsvault** page, on the right side under **Overview (1)**, in the **Site Recovery** section, select **Getting started (2)** .
 
-   ![](../media/15.png)
+   ![](../Media/az-801-11.png)
 
 1. On the **az801l05a-rsvault \| Site Recovery** page, in the **Hyper-V machines to Azure** section, select **1. Prepare infrastructure**. 
 
-   ![](../media/16.png)
+   ![](../media/az-801-12.png)
 
 1. On the **Deployment planning** tab of the **Prepare infrastructure** page, in the **Deployment planning completed?** drop-down list, select **Yes, I have done it (1)** and select **Next (2)**.
 
@@ -290,7 +290,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
    - On the **Source settings** tab of the **Prepare infrastructure** page, select the **Add Hyper-V site (2)** link. 
    - On the **Create Hyper-V Site** page, in the **Name** text box, enter **az801l05-site(3)** and select **OK (4)**.
 
-     ![](../media/17.png)
+     ![](../media/az-801-13.png)
 
       > **Note:** Do not close the browser window as we will be using it for further tasks.
 
@@ -332,7 +332,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
    - On the **Add Server** page, select the **Download (2)** link in **step 3** of the procedure for adding on-premises Hyper-V hosts in order to download the installer for Microsoft Azure Site Recovery Provider.
 
-     ![](../media/22.png)
+     ![](../media/az-801-22.png)
 
       >**Note:** If you receive the Microsoft Edge notification that **AzureSiteRecoveryProvider.exe can't be downloaded securely**, move the cursor over the right side of the message to reveal the ellipsis symbol (**...**), select it, in the drop-down menu, select **Copy download link**, open another tab in the same Microsoft Edge window, paste the link you copied, and then press Enter.
 
@@ -351,7 +351,7 @@ In this task, you will add a Hyper-V site to your Recovery Services vault and in
 
 1. Switch to the Microsoft Edge window displaying the Azure portal, and in the **Add Server** page, select the **Download** button in **step 4** of the procedure for registering on-premises Hyper-V hosts in order to download the vault registration key.
 
-    ![](../media/26.png)
+    ![](../media/az-801-26.png)
 
 1. Switch to the **Provider installation** wizard and select **Register**. This will start the **Microsoft Azure Site Recovery Registration Wizard**.
 
@@ -402,6 +402,8 @@ Verify that the **Hyper-V site** and **Hyper-V servers** settings are set correc
 
     ![](../media/azm5-32.png)
 
+    >**Note:** If it shows **No available items**, select **Add Hyper-V site**. On the Create Hyper-V Site page, in the Name text box, enter **az801l05-site** and select **OK**.
+
 1. On the **Target settings** tab of the **Prepare infrastructure** page, accept the default settings and select **Next**.
 
 1. On the **Replication policy** tab of the **Prepare infrastructure** page, select **Create new policy and associate**. 
@@ -415,7 +417,7 @@ Verify that the **Hyper-V site** and **Hyper-V servers** settings are set correc
    |Name|**az801l05-replication-policy** (1)|
    |Copy frequency|**30 seconds** (2)|
 
-   ![](../media/32.png)
+   ![](../media/az-801-32.png)
 
 1. Back on the **Replication policy** tab of the **Prepare infrastructure** page, wait until the site has been associated with the policy **(1)** and select **Next (2)**.
 
@@ -470,7 +472,8 @@ In this task, you will be enabling replication for a selected Hyper-V virtual ma
 
    ![](../media/37.png)
 
-   >**Note:** If you receive an error that the replication could not be enabled, please verify the **soft delete for blob and container is disabled in the storage account** and restart the replication job again.
+   >**Note:** If you receive an error stating that replication could not be enabled, please verify that s**oft delete for blob and container is disabled in the storage account**. Then, restart the replication job by going to the vertical menu on the left side, selecting **Replicated items** under **Protected items**. Locate the entry representing **SEA-CORE1**, select it, and restart the replication.
+
       ![](../media/azm5-42.png)
 
 ### Task 4: Review Azure VM replication settings
