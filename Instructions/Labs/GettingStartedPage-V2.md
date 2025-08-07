@@ -6,7 +6,7 @@ Welcome to your AZ-801: Configuring Windows Server Hybrid Advanced Services work
  
 Once you're ready to dive in, your virtual machine and lab guide will be available in your web browser.
  
-  ![Access Your VM and Lab Guide](../Media/labguide.png)
+  ![Access Your VM and Lab Guide](../Media/GSS1.png)
 
 ### Virtual Machine & Lab Guide
  
@@ -16,23 +16,29 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To better understand your lab resources and credentials, navigate to the **Environment** tab.
  
-  ![Explore Lab Resources](../Media/env-1.png)
+  ![Explore Lab Resources](../Media/GSS2.png)
  
+## Track your progress
+
+To track your progress, navigate to the **Progress** tab.
+
+![TRack Progress](../Media/GSS4.png)
+
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-  ![Use the Split Window Feature](../Media/plus.png)
+   ![Use the Split Window Feature](../Media/GSS3.png)
  
 ## Managing Your Virtual Machine
  
 1. Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-   ![Manage Your Virtual Machine](../Media/resources.png)
+   ![Manage Your Virtual Machine](../Media/GSS5.png)
 
 2. To initiate the required VMs, use the dropdown menu located at the top of the lab environment
 
-      ![](../media/azm2-1.png)
+      ![](../Media/GSS6.png)
  
 3. When logging into the Hyper-V virtual machines, if a message appears stating **"Press Ctrl+Alt+Delete to unlock"**, navigate to the **Actions** menu in the Virtual Machine Connection window and select the **Ctrl+Alt+Delete** option, as shown in the image below.
 
@@ -70,7 +76,7 @@ Please make sure to use the **CTRL+SHIFT+V** or **CTRL+V** keys when pasting com
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
-   ![Launch Azure Portal](../Media/sc900-image(1).png)
+   ![Launch Azure Portal](../Media/GSS7.png)
 
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
