@@ -318,7 +318,7 @@ In this task, you will be installing and configuring the Windows Server Backup r
 
 1. In File Explorer, select **Local Disk (C:) (1)** in the **navigation** pane. Right-click or access the context menu in an empty space in the details pane, select **New (2)**, and then select **Folder (3)**. 
 
-   ![](../Media/azm4-33.png)
+   ![](../Media/az801-09.png)
 
 1. Name the folder **BackupShare**. Right-click or access the context menu for the **BackupShare (1)** folder, select **Give access to (2)**, and then select **Specific people (3)**.
 
@@ -330,7 +330,7 @@ In this task, you will be installing and configuring the Windows Server Backup r
 
 1. In the **Permission Level** column, set the value for **Authenticated Users** to **Read/Write (1)**, select **Share (2)**.
 
-   ![](../Media/azm4-36.png)
+   ![](../Media/az-801-10.png)
 
 1. Then select **Done**.   
 
