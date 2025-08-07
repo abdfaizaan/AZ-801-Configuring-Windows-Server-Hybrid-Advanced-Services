@@ -41,11 +41,11 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 1. On the **Create an Azure VM with a new AD Forest** page, select **Edit template**.
 
-1. On the **Edit template** page, browse to the **storageProfile** section (starting with the line **195**) and verify that the **sku** (on line **199**) is set to **2022-Datacenter (1)**,if not then change it to 2022-Datacenter, and the **version** (on line **200**) is set to **latest (2)** and that **dataDisks** **caching** (on line **213**) is set to **None (3)**.
+1. On the **Edit template** page, browse to the **storageProfile** section (starting with the line **195**) and verify that the **sku** (on line **199**) is set to **2022-Datacenter (1)**, if not then change it to 2022-Datacenter, and the **version** (on line **200**) is set to **latest (2)** and that **dataDisks** **caching** (on line **213**) is set to **None (3)**.
 
    > **Note**: Caching on the disks hosting AD DS database and log files should be set to **None**.
 
- 	![](../Media/lab6y1.png)
+   ![](../Media/L6E1T1S6.png)
 
 1. On the **Edit template** page, browse to the **extension** section (starting with the line **233**) and note that the template uses PowerShell Desired State Configuration to run the **CreateADPDC.ps1** script within the deployed Azure virtual machine (VM).
 
@@ -66,7 +66,7 @@ In this task, you will deploy a domain controller using an ARM template. You wil
 
 1. Browse to the section that provisions the network interface of the Azure VM (starting with the line **152**) and note that the private IP address allocation method is set to **Static** (on line **164**).
 
-   ![](../Media/pip.png)
+   ![](../Media/L6E1T1S9.png)
 
    >**Note**: Using the static assignment is common when deploying domain controllers, but it is essential for servers that host the DNS server role.
 
@@ -173,17 +173,18 @@ In this task, you will add an AzureBastionSubnet to the virtual network. Then, y
    | Resource group |select the existing resource group **AZ801-L0602-RG** |
    | Name | **az801l06a-bastion (1)** |
    | Region | Leave the default region |
-   | Tier | **Basic (2)** |
-   | Virtual network | **az801l06a-vnet (3)** |
-   | Subnet | **AzureBastionSubnet (10.6.255.0/24) (4)** |
-   | Public IP address | **Create new (5)** |
-   | Public IP name | **az801l06a-vnet-ip (6)** |
+   | Availabilty zone | **None (2)** |
+   | Tier | **Basic (3)** |
+   | Virtual network | **az801l06a-vnet (4)** |
+   | Subnet | **AzureBastionSubnet (10.6.255.0/24) (5)** |
+   | Public IP address | **Create new (6)** |
+   | Public IP name | **az801l06a-vnet-ip (7)** |
 
-1. On the **Review + create (7)** tab of the **Create a Bastion** page, select **Create**:
+1. On the **Review + create (8)** tab of the **Create a Bastion** page, select **Create**.
 
-   ![](../Media/lab6y3.png)
+   ![](../Media/L5E1T2S11-1.png)
 
-   ![](../Media/lab6y4.png)
+   ![](../Media/L6E1T2S11.png)
 
    >**Note**: Wait for the deployment to complete before you proceed to the next task. The deployment might take about 5 minutes.
 
@@ -195,7 +196,7 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
 
 1. On **SEA-SVR2**, in the Microsoft Edge window displaying the Azure portal, in the **Search resources, services, and docs** text box, on the toolbar, search for and select **Virtual machines**. 
 1. On the **Virtual machines** page, select **+ Create**, and then, in the drop-down menu, select **Azure virtual machine**.
-1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. On the **Basics** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Then, select **Next: Disks > (12)**
 
    | Setting | Value |
    | --- | --- |
@@ -210,23 +211,24 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
    | Run with Azure Spot discount | **No** |
    | Size | **Standard D2s v3 (7)** |
    | Username | **Student (8)** |
-   | Password | **Pa55w.rd1234** (9) |
-   | Xonfirm Password | **Pa55w.rd1234** (10) |
+   | Password | **Pa55w.rd1234 (9)**  |
+   | Xonfirm Password | **Pa55w.rd1234 (10)**  |
    | Public inbound ports | **None (11)** |
    | Would you like to use an existing Windows Server license? | **No** |
 
-   ![](../Media/lab6y5.png)
+   ![](../Media/L6E1T3S3.png)
 
-   ![](../Media/lab6y6.png)
+   ![](../Media/L6E1T3S3-1.png)
 
-1. Select **Next: Disks > (12)**, and then, on the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. On the **Disks** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values).
 
    | Setting | Value |
    | --- | --- |
    | OS disk type | **Standard SSD** |
 
 1. On the **Disks** tab of the **Create a virtual machine** blade, in the **Data disks** section, select **Create and attach a new disk**.
-1. On the **Create a new disk** page, specify the following settings (leave others with their default values), and then select **OK (4)**:
+
+1. On the **Create a new disk** page, specify the following settings (leave others with their default values), and then select **OK (4)**.
 
    | Setting | Value |
    | --- | --- |
@@ -234,9 +236,9 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
    | Source type | **None (empty disk) (2)** |
    | Size | **32 GiB** **Premium SSD (3)** |
 
-   ![](../Media/lab6y7.png)
+   ![](../Media/L6T1T3S6.png)
 
-1. Back on the **Disks** tab of the **Create a virtual machine** blade, select **Next: Networking >**, and then, on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. Back on the **Disks** tab of the **Create a virtual machine** blade, select **Next: Networking >**, and then, on the **Networking** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Select **Next: Management > (6)**.
 
    | Setting | Value |
    | --- | --- |
@@ -247,31 +249,31 @@ In this task, you will deploy a second VM using the Azure portal as an additiona
    | Enable accelerated networking | disabled (5) |
    | Load balancing | None (6) |
 
-   ![](../Media/lab6y8.png)
+   ![](../Media/L6E1T3S7.png)
 
-1. Select **Next: Management > (7)**, and then, on the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1.  On the **Management** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values). Then select **Next: Monitoring > (2)**.
 
    | Setting | Value |
    | --- | --- |
    | Patch orchestration options | **Manual updates (1)** |
 
-   ![](../Media/lab6y9.png)
+   ![](../Media/L6E1T3S8.png)
 
-1. Select **Next: Monitoring > (2)**, and then, on the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values):
+1. On the **Monitoring** tab of the **Create a virtual machine** blade, specify the following settings (leave others with their default values).
 
    | Setting | Value |
    | --- | --- |
    | Boot diagnostics | **Enable with managed storage account (recommended) (1)** |
 
-   ![](../Media/lab6y10.png)
+   ![](../Media/L6E1T3S9.png)
 
 1. Select **Next: Advanced > (2)**, on the **Advanced** tab of the **Create a virtual machine** blade, review the available settings without modifying any of them, and then select **Review + Create**.
 
-   ![](../Media/lab6y11.png)
+   ![](../Media/L6E1T3S10.png)
 
 1. On the **Review + Create** blade, select **Create**.
 
-   ![](../Media/lab6y12.png)
+   ![](../Media/L6E1T3S11.png)
 
    >**Note**: Wait for the deployment to complete. The deployment might take about 3 minutes.
 
