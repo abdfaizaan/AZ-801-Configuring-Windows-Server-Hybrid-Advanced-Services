@@ -276,7 +276,7 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 
     ![](../media/azm7-39.png)
 
-1. In the **Hyper-V Manager** console, select the **az801l07a-hv-vm (1)** node. From the right navigation pane, under **Actions** select **New (2)** and then, in the cascading menu, select **Virtual Machine (3)**. This will start the **New Virtual Machine Wizard**. 
+1. In the **Hyper-V Manager** console, select the **AZ801L07a-HV-VM (1)** node. From the right navigation pane, under **Actions** select **New (2)** and then, in the cascading menu, select **Virtual Machine (3)**. This will start the **New Virtual Machine Wizard**. 
 
     ![](../media/azm7-41.png)
 
@@ -305,8 +305,6 @@ In this task, you deploy a nested VM within an Azure VM by setting up a virtual 
 1. On the **Configure Networking** page of the **New Virtual Machine Wizard**, in the **Connection** drop-down list, select **NestedSwitch (1)**, and then select **Next > (2)**.
 
     ![](../media/azm7-46.png)
-
-1. Before proceeding to the next page, navigate to the File explorer.    
 
 1. On the **Connect Virtual Hard Disk** page of the **New Virtual Machine Wizard**, select the option **Use an existing virtual hard disk (1)**, click on **Browse (2)**, navigate to **F:\VHDs** folder then select downloaded **VHD** file. After set the location **(3)**, then select **Next > (4)**.
 
@@ -442,7 +440,7 @@ In this task, you create an Azure Migrate project by logging into the Azure port
 
 1. Then, on the **Azure Migrate \| Get Started** page, under **Migration goals (1)** section, select **Servers, databases, and web apps (2)**. select **Create Project (3)**. 
  
-    ![](../media/azm7-66.png)
+    ![](../media/E2T2S3-0808.png)
   
 1. On the **Create Project** page, specify the following settings (leave others with their default values) and select **Create (4)**:
 
